@@ -77,4 +77,7 @@ dependencies {
     compile 'javax.annotation:javax.annotation-api:1.2'
 
     compile "org.jetbrains.anko:anko:0.10.4"
+
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
 }
