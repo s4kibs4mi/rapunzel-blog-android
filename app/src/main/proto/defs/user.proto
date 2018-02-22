@@ -1,0 +1,130 @@
+syntax = "proto3";
+
+package defs;
+
+option go_package = "github.com/s4kibs4mi/rapunzel-blog/proto/defs";
+option java_package = "ninja.sakib.rapunzel.android.proto";
+option java_outer_classname = "UserProto";
+option java_multiple_files = true;
+
+import "defs/error.proto";
+import "defs/session.proto";
+
+/**
+ * := Coded with love by Sakib Sami on 19/01/18.
+ * := root@sakib.ninja
+ * := www.sakib.ninja
+ * := Coffee : Dream : Code
+ */
+
+message User {
+    string ID = 1;
+    string Name = 2;
+    string Username = 3;
+    string Email = 4;
+    string Details = 6;
+    string UserType = 7;
+    string UserStatus = 8;
+    string CreatedAt = 9;
+    string UpdatedAt = 10;
+}
+
+message ReqRegistration {
+    string Name = 1;
+    string Username = 2;
+    string Email = 3;
+    string Password = 4;
+    string Details = 5;
+}
+
+message ResRegistration {
+    User User = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqLogin {
+    string Username = 1;
+    string Password = 2;
+}
+
+message ResLogin {
+    Session Session = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqProfile {
+    string UserID = 1;
+}
+
+message ResProfile {
+    User User = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqUpdateUser {
+    string Name = 1;
+    string Details = 2;
+}
+
+message ResUpdateUser {
+    User User = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqChangePassword {
+    string OldPassword = 1;
+    string NewPassword = 2;
+}
+
+message ResChangePassword {
+    bool Success = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqChangeUserStatus {
+    string UserID = 1;
+    string NewStatus = 2;
+}
+
+message ResChangeUserStatus {
+    bool Success = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqChangeUserType {
+    string UserID = 1;
+    string NewType = 2;
+}
+
+message ResChangeUserType {
+    bool Success = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqUserLogout {
+    string AccessToken = 1;
+}
+
+message ResUserLogout {
+    bool Success = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqResetPasswordRequest {
+    string Username = 1;
+}
+
+message ResResetPasswordRequest {
+    bool Success = 1;
+    repeated Error Errors = 2;
+}
+
+message ReqResetPassword {
+    string PasswordResetToken = 1;
+    string NewPassword = 2;
+}
+
+message ResResetPassword {
+    bool success = 1;
+    repeated Error Errors = 2;
+}

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package defs;
+
+option go_package = "github.com/s4kibs4mi/rapunzel-blog/proto/defs";
+option java_package = "ninja.sakib.rapunzel.android.proto";
+option java_outer_classname = "CommonProto";
+option java_multiple_files = true;
+
+/**
+ * := Coded with love by Sakib Sami on 19/01/18.
+ * := root@sakib.ninja
+ * := www.sakib.ninja
+ * := Coffee : Dream : Code
+ */
+
+message Pager {
+    int32 current_page = 1;
+    int32 total_page = 2;
+    int32 total = 3;
+    int32 current = 4;
+}
+
+message Query {
+    string field = 1;
+    string value = 2;
+}
+
+message GetByQuery {
+    repeated Query query = 1;
+}
+
+message GetByID {
+    string id = 1;
+}

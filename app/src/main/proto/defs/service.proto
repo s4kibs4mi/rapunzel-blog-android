@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package defs;
+
+option go_package = "github.com/s4kibs4mi/rapunzel-blog/proto/defs";
+option java_package = "ninja.sakib.rapunzel.android.proto";
+option java_outer_classname = "ServiceProto";
+option java_multiple_files = true;
+
+import "defs/user.proto";
+import "defs/post.proto";
+import "defs/comment.proto";
+import "defs/common.proto";
+
+/**
+ * := Coded with love by Sakib Sami on 19/01/18.
+ * := root@sakib.ninja
+ * := www.sakib.ninja
+ * := Coffee : Dream : Code
+ */
+
+service RapunzelBlogService {
+    rpc Register (ReqRegistration) returns (ResRegistration) {
+    }
+    rpc Login (ReqLogin) returns (ResLogin) {
+    }
+    rpc Profile (ReqProfile) returns (ResProfile) {
+    }
+    rpc Update (ReqUpdateUser) returns (ResUpdateUser) {
+    }
+    rpc ChangePassword (ReqChangePassword) returns (ResChangePassword) {
+    }
+    rpc ChangeStatus (ReqChangeUserStatus) returns (ResChangeUserStatus) {
+    }
+    rpc ChangeType (ReqChangeUserType) returns (ResChangeUserType) {
+    }
+    rpc Logout (ReqUserLogout) returns (ResUserLogout) {
+    }
+    rpc ResetPasswordRequest (ReqResetPasswordRequest) returns (ResResetPasswordRequest) {
+    }
+    rpc ResetPassword (ReqResetPassword) returns (ResResetPassword) {
+    }
+    rpc CreatePost (ReqPostCreate) returns (ResPost) {
+    }
+    rpc UpdatePost (ReqPostUpdate) returns (ResPost) {
+    }
+    rpc DeletePost (GetByID) returns (ResPostSuccess) {
+    }
+    rpc ChangePostStatus (ReqPostChangeStatus) returns (ResPost) {
+    }
+    rpc GetPost (GetByID) returns (ResPost) {
+    }
+    rpc FavouritePost (GetByID) returns (ResPost) {
+    }
+    rpc GetPosts (GetByQuery) returns (ResPostList) {
+    }
+    rpc CreateComment (ReqCommentCreate) returns (ResComment) {
+    }
+    rpc UpdateComment (ReqCommentUpdate) returns (ResComment) {
+    }
+    rpc DeleteComment (GetByID) returns (ResCommentSuccess) {
+    }
+    rpc GetComment (GetByID) returns (ResComment) {
+    }
+    rpc GetComments (GetByQuery) returns (ResCommentList) {
+    }
+}

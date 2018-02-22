@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package defs;
+
+option go_package = "github.com/s4kibs4mi/rapunzel-blog/proto/defs";
+option java_package = "ninja.sakib.rapunzel.android.proto";
+option java_outer_classname = "PostProto";
+option java_multiple_files = true;
+
+import "defs/error.proto";
+import "defs/common.proto";
+
+/**
+ * := Coded with love by Sakib Sami on 19/01/18.
+ * := root@sakib.ninja
+ * := www.sakib.ninja
+ * := Coffee : Dream : Code
+ */
+
+message Post {
+    string id = 1;
+    string title = 2;
+    string body = 3;
+    repeated string categories = 4;
+    repeated string tags = 5;
+    string user_id = 6;
+    string created_at = 7;
+    string updated_at = 8;
+    string status = 9;
+    int64 views = 10;
+    int64 favourites = 11;
+}
+
+message ReqPostCreate {
+    string title = 1;
+    string body = 2;
+    repeated string categories = 3;
+    repeated string tags = 4;
+}
+
+message ResPost {
+    Post post = 1;
+    repeated Error errors = 2;
+}
+
+message ReqPostUpdate {
+    string id = 1;
+    string title = 2;
+    string body = 3;
+    repeated string categories = 4;
+    repeated string tags = 5;
+}
+
+message ResPostSuccess {
+    bool success = 1;
+    repeated Error errors = 2;
+}
+
+message ReqPostChangeStatus {
+    string id = 1;
+    string new_status = 2;
+}
+
+message ResPostList {
+    repeated Post posts = 1;
+    Pager pager = 2;
+}
