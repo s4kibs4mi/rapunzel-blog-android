@@ -55,4 +55,9 @@ abstract class BaseActivity<V : MvpView, P : MvpPresenter<V>> : MvpActivity<V, P
             actionBar.title = title
         }
     }
+
+    override fun onStop() {
+        progressingDialog.hide()
+        super.onStop()
+    }
 }
