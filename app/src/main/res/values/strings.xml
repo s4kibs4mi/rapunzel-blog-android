@@ -4,4 +4,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">Rapunzel Blog</string>
+    <string name="reg_header">Create New\nAccount</string>
+    <string name="reg_first_name_hint">First Name</string>
+    <string name="reg_last_name_hint">Last Name</string>
+    <string name="reg_email_hint">Email Address</string>
+    <string name="reg_username_hint">Username</string>
+    <string name="reg_password_hint">Password</string>
+    <string name="reg_agreement">By tapping Sign Up you agree to the terms and conditions.</string>
 </resources>

@@ -14,6 +14,6 @@ class SplashActivity : AppCompatActivity() {
 
         initGRPCConnection()
 
-        startActivity(Intent(applicationContext, HomeActivity::class.java))
+        startActivity(Intent(applicationContext, RegistrationActivity::class.java))
     }
 }

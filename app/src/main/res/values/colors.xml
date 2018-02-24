@@ -6,4 +6,6 @@
 
     <color name="colorBackgroundBlue">#303F9F</color>
     <color name="colorBackgroundWhite">#ffffff</color>
+    <color name="reg_header">#000000</color>
+    <color name="reg_background">#f5f6f8</color>
 </resources>

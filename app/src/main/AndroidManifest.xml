@@ -24,6 +24,7 @@
             android:name=".ui.activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activities.RegistrationActivity"></activity>
     </application>
 
 </manifest>

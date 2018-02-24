@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/reg_background"
+    android:gravity="center"
+    tools:context="ninja.sakib.rapunzel.android.ui.activities.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/regHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/reg_header"
+        android:textColor="@color/reg_header"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regHeader"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:id="@+id/regNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="2">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/reg_first_name_hint" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/reg_last_name_hint" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/regUsername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/regNameContainer"
+            android:hint="@string/reg_username_hint" />
+
+        <EditText
+            android:id="@+id/regEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/regUsername"
+            android:hint="@string/reg_email_hint"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/regPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/regEmailAddress"
+            android:hint="@string/reg_password_hint"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/regAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/regPassword"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/reg_agreement" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/regAgreement"
+            android:text="Sign Up"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</RelativeLayout>

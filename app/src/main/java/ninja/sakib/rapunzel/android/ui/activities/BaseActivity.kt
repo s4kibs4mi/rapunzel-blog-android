@@ -28,4 +28,31 @@ abstract class BaseActivity<V : MvpView, P : MvpPresenter<V>> : MvpActivity<V, P
     fun hideLoadingDialog() {
         progressingDialog.hide()
     }
+
+    fun hideTitleBar() {
+        if (supportActionBar != null) {
+            supportActionBar!!.hide()
+        }
+        if (actionBar != null) {
+            actionBar!!.hide()
+        }
+    }
+
+    fun enableGoBackBtn() {
+        if (supportActionBar != null) {
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        }
+        if (actionBar != null) {
+            actionBar!!.setDisplayHomeAsUpEnabled(true)
+        }
+    }
+
+    fun setActionBarTitle(title: String) {
+        if (supportActionBar != null) {
+            supportActionBar!!.title = title
+        }
+        if (actionBar != null) {
+            actionBar.title = title
+        }
+    }
 }
