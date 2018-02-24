@@ -19,7 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activities.LoginActivity" />
-        <activity android:name=".ui.activities.BaseActivity"></activity>
+        <activity android:name=".ui.activities.BaseActivity" />
+        <activity
+            android:name=".ui.activities.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
