@@ -15,4 +15,6 @@
     <string name="no_account_yet_txt">Havn\'t account yet ?</string>
     <string name="register_now_txt">Register Now</string>
     <string name="new_post_txt">New Post</string>
+    <string name="new_post_save_txt">Save</string>
+    <string name="new_post_clear_txt">Clear</string>
 </resources>

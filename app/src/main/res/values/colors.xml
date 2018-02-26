@@ -8,4 +8,5 @@
     <color name="colorBackgroundWhite">#ffffff</color>
     <color name="reg_header">#000000</color>
     <color name="reg_background">#f5f6f8</color>
+    <color name="editor_background">#b6b6b6</color>
 </resources>

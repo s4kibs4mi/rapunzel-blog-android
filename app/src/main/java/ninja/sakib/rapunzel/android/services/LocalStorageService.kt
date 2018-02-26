@@ -14,6 +14,7 @@ import ninja.sakib.rapunzel.android.proto.Session
 val appPreferenceName = "rapunzel-blog"
 val prefKeyAccessToken = "access_token"
 val prefKeyRefreshToken = "refresh_token"
+val prefLastTempPost = "last_temp_post"
 
 fun saveSession(session: Session): Boolean {
     val preference = GetGlobalAppContext()!!.getSharedPreferences(appPreferenceName, Context.MODE_PRIVATE)
@@ -24,4 +25,14 @@ fun saveSession(session: Session): Boolean {
 fun hasSession(): Boolean {
     val preference = GetGlobalAppContext()!!.getSharedPreferences(appPreferenceName, Context.MODE_PRIVATE)
     return preference!!.getString(prefKeyAccessToken, "").isNotEmpty()
+}
+
+fun writeLastTempPost(body: String): Boolean {
+    val preference = GetGlobalAppContext()!!.getSharedPreferences(appPreferenceName, Context.MODE_PRIVATE)
+    return preference!!.edit().putString(prefLastTempPost, body).commit()
+}
+
+fun getLastTempPost(): String {
+    val preference = GetGlobalAppContext()!!.getSharedPreferences(appPreferenceName, Context.MODE_PRIVATE)
+    return preference!!.getString(prefLastTempPost, "")
 }

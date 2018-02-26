@@ -87,4 +87,8 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     implementation 'ninja.sakib:PultusORM:v1.7'
+
+    implementation 'ru.noties:markwon:1.0.3'
+    implementation 'ru.noties:markwon-image-loader:1.0.3'
+    implementation 'ru.noties:markwon-view:1.0.3'
 }

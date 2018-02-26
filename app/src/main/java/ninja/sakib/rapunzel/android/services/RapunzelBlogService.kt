@@ -10,7 +10,7 @@ import ninja.sakib.rapunzel.android.proto.RapunzelBlogServiceGrpc
  * := Coffee : Dream : Code
  */
 
-val serviceHost = "192.168.0.194"
+val serviceHost = "192.168.0.102"
 val servicePort = 8090
 
 val service: RapunzelBlogServiceGrpc.RapunzelBlogServiceBlockingStub = RapunzelBlogServiceGrpc.newBlockingStub(ManagedChannelBuilder

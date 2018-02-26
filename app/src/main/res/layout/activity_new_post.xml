@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="2"
     tools:context="ninja.sakib.rapunzel.android.ui.activities.NewPostActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/newPostEditor"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/editor_background"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/newPostLiveView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>

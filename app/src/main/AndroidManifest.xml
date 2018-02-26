@@ -27,7 +27,9 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activities.RegistrationActivity" />
-        <activity android:name=".ui.activities.NewPostActivity"></activity>
+        <activity
+            android:name=".ui.activities.NewPostActivity"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>
