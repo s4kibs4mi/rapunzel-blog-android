@@ -14,4 +14,5 @@
     <string name="login_header">Login</string>
     <string name="no_account_yet_txt">Havn\'t account yet ?</string>
     <string name="register_now_txt">Register Now</string>
+    <string name="new_post_txt">New Post</string>
 </resources>

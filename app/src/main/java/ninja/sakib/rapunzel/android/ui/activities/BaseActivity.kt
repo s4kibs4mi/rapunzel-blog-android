@@ -47,6 +47,18 @@ abstract class BaseActivity<V : MvpView, P : MvpPresenter<V>> : MvpActivity<V, P
         }
     }
 
+    fun enableHomeNavBtn() {
+        if (supportActionBar != null) {
+            supportActionBar!!.setLogo(R.drawable.ic_menu_white_24dp)
+            supportActionBar!!.setHomeButtonEnabled(true)
+        }
+        if (actionBar != null) {
+            actionBar!!.setLogo(R.drawable.ic_menu_white_24dp)
+            actionBar!!.setHomeButtonEnabled(true)
+        }
+    }
+
+
     fun setActionBarTitle(title: String) {
         if (supportActionBar != null) {
             supportActionBar!!.title = title
