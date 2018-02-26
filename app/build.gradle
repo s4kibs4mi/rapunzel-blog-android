@@ -10,6 +10,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
+        multiDexEnabled true
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -73,15 +74,17 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    compile 'io.grpc:grpc-okhttp:1.10.0'
-    compile 'io.grpc:grpc-protobuf-lite:1.10.0'
-    compile 'io.grpc:grpc-stub:1.10.0'
-    compile 'javax.annotation:javax.annotation-api:1.2'
+    implementation 'io.grpc:grpc-okhttp:1.10.0'
+    implementation 'io.grpc:grpc-protobuf-lite:1.10.0'
+    implementation 'io.grpc:grpc-stub:1.10.0'
+    implementation 'javax.annotation:javax.annotation-api:1.2'
 
-    compile "org.jetbrains.anko:anko:0.10.4"
+    implementation "org.jetbrains.anko:anko:0.10.4"
 
-    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
-    compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
+    implementation 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    implementation 'com.hannesdorfmann.mosby:viewstate:2.0.1'
 
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+    implementation 'ninja.sakib:PultusORM:v1.7'
 }

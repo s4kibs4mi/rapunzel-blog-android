@@ -10,16 +10,23 @@ import ninja.sakib.rapunzel.android.proto.RapunzelBlogServiceGrpc
  * := Coffee : Dream : Code
  */
 
-var service: RapunzelBlogServiceGrpc.RapunzelBlogServiceBlockingStub? = null
+val serviceHost = "127.0.0.1"
+val servicePort = 8090
 
-fun initGRPCConnection() {
-    val channel = ManagedChannelBuilder
-            .forAddress("103.205.71.51", 8090)
-            .usePlaintext(true)
-            .build()
-    service = RapunzelBlogServiceGrpc.newBlockingStub(channel)
+var service = RapunzelBlogServiceGrpc.newBlockingStub(ManagedChannelBuilder
+        .forAddress(serviceHost, servicePort)
+        .usePlaintext(true)
+        .build())
+
+var callbackService = RapunzelBlogServiceGrpc.newFutureStub(ManagedChannelBuilder
+        .forAddress(serviceHost, servicePort)
+        .usePlaintext(true)
+        .build())
+
+fun getRapunzelBlogService(): RapunzelBlogServiceGrpc.RapunzelBlogServiceBlockingStub {
+    return service
 }
 
-fun getRapunzelBlogService(): RapunzelBlogServiceGrpc.RapunzelBlogServiceBlockingStub? {
-    return service
+fun getRapunzelBlogCallbackService(): RapunzelBlogServiceGrpc.RapunzelBlogServiceFutureStub {
+    return callbackService
 }
