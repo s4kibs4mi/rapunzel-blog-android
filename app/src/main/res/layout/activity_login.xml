@@ -8,25 +8,64 @@
     android:gravity="center"
     tools:context="ninja.sakib.rapunzel.android.ui.activities.LoginActivity">
 
-    <EditText
-        android:id="@+id/loginUsername"
+    <TextView
+        android:id="@+id/loginHeader"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Your Username" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/login_header"
+        android:textColor="@color/reg_header"
+        android:textSize="22sp" />
 
-    <EditText
-        android:id="@+id/loginPassword"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/loginUsername"
-        android:hint="Your Password"
-        android:inputType="textPassword" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginHeader"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp">
 
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/loginPassword"
-        android:text="Login"
-        android:textAllCaps="false" />
+        <EditText
+            android:id="@+id/loginUsername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/reg_username_hint" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/loginUsername"
+            android:hint="@string/reg_password_hint"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginPassword"
+            android:text="Login"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/loginNoAccountHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginBtn"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/no_account_yet_txt"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/loginRegisterNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginNoAccountHint"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/register_now_txt"
+            android:textSize="18sp" />
+    </RelativeLayout>
 </RelativeLayout>

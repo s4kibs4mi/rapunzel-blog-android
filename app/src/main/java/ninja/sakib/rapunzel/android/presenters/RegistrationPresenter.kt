@@ -35,8 +35,8 @@ class RegistrationPresenter : MvpBasePresenter<RegistrationView>() {
                         }
                     }
 
-                    for (err in res.errorsList) {
-                        view!!.onRegistrationFailure(GRPCError(err.details))
+                    for (e in res.errorsList) {
+                        view!!.onRegistrationFailure(GRPCError(e.details))
                         return@doAsync
                     }
                 }

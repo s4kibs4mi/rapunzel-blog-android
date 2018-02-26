@@ -11,4 +11,7 @@
     <string name="reg_username_hint">Username</string>
     <string name="reg_password_hint">Password</string>
     <string name="reg_agreement">By tapping Sign Up you agree to the terms and conditions.</string>
+    <string name="login_header">Login</string>
+    <string name="no_account_yet_txt">Havn\'t account yet ?</string>
+    <string name="register_now_txt">Register Now</string>
 </resources>
